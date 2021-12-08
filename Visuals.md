@@ -3,7 +3,7 @@
 ## Illustrations
 * https://undraw.co/illustrations
 * https://gallery.manypixels.co/
-* uplabs.com
+* https://www.uplabs.com/
 
 ## Photos
 * https://www.pexels.com/
