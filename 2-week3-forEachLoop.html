@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("dela");
+      //I do not completely understand each individual thing...
+      //...but I WANT TO!
+      function showLol(why) {
+        console.log(why);
+      }
+      let myCities = ["London", "Lyon", "Lisbon", "Ljubljana"];
+      myCities.forEach(showLol);
+
+      // https://www.youtube.com/watch?v=E2GawbHDFfs
+      // JavaScript forEach Loop Tutorial with Example
+      const myNums = [1, 42, 33, 24, 75];
+
+      for (i = 0; i < myNums.length; i++) {
+        console.log(myNums[i]);
+      }
+
+      myNums.forEach(function (myNums, index, array) {
+        console.log("Index: " + index, myNums);
+      });
+
+      myNums.forEach(function (myNums, index, array) {
+        console.log(array);
+      });
+
+      myNums.forEach(showMe);
+      function showMe(hm, index) {
+        console.log("index: " + index, hm);
+      }
+
+      myNums.forEach(showIt);
+      function showIt(hm, index, array) {
+        console.log(array);
+      }
+
+      console.log(myNums[myNums.length - 2]);
+    </script>
+  </body>
+</html>
