@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Dates</title>
+    <style>
+      h1 {
+        color: #6443ea;
+        font-family: "PT Mono";
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>📅 Dates</h1>
+    <h2></h2>
+    <p>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+        >More on MDN</a
+      >
+    </p>
+    <script>
+      let now = new Date();
+
+      let h2 = document.querySelector("h2");
+
+      let date = now.getDate();
+      let hours = now.getHours(); // when midnight = 0, when noon = 12
+      if (hours < 10) {
+        hours = `0${hours}`; // when midnight = 00, when noon = 12
+      }
+      let minutes = now.getMinutes(); //when 5min = 5, when 50min = 50
+      if (minutes < 10) {
+        minutes = `0${minutes}`; // when 5min = 05, when 50min = 50
+      }
+      let year = now.getFullYear();
+      let yearTW = year - 1911;
+
+      let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let day = days[now.getDay()];
+
+      let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      let month = months[now.getMonth()];
+
+      h2.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+
+      console.log(new Date());
+      console.log(new Date().getSeconds());
+
+      let sentence = `Today is ${day} ${month} ${date}, ${year}, ${hours}:${minutes}:${now.getSeconds()}`;
+      console.log(sentence);
+    </script>
+  </body>
+</html>
