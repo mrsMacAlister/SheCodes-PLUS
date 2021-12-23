@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Geolocation 🪐</h1>
+
+    <script>
+      function showTemp(response) {
+        console.log(response.data.main.temp);
+        let tempElement = document.querySelector("h1");
+        let temperature = Math.round(response.data.main.temp);
+        tempElement.innerHTML = `It is currently ${temperature}°C`;
+      }
+
+      function showLocation(location) {
+        console.log(location.coords.longitude);
+        console.log(location.coords.latitude);
+        let lon = location.coords.longitude;
+        let lat = location.coords.latitude;
+        let units = "metric";
+        let apiKey = `4c09ae07987b07a4993b3f7e761af71d`;
+        let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+        let apiUrl = `${apiEndpoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+        console.log(apiUrl);
+        axios.get(apiUrl).then(showTemp);
+      }
+
+      navigator.geolocation.getCurrentPosition(showLocation);
+    </script>
+  </body>
+</html>
