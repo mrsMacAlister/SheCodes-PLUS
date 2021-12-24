@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="2-week2-FinalHW.css" />
+    <script
+      src="https://kit.fontawesome.com/df1cab600c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <div id="main-container" class="container">
+      <div class="card" style="width: 100%">
+        <div class="card-body">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-10">
+                <input
+                  id="search-bar"
+                  class="search-bar"
+                  type="search"
+                  placeholder="Enter your city"
+                  autofocus="on"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-2">
+                <button
+                  type="submit"
+                  id="search-button"
+                  class="btn btn-warning"
+                  value="submit"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="col-3">
+                <button id="my-location" class="btn btn-warning">
+                  My Location
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-regular fa-cloud-sun big-icon"></i>
+              </div>
+              <div class="col-6">
+                <h2 id="h2-degrees">
+                  <span id="big-degrees" type="number">17</span>
+                  <a href="#" id="celsius">°C</a>|<a href="#" id="fahrenheit"
+                    >°F</a
+                  >
+                </h2>
+                <ul class="info left">
+                  <li class="details">
+                    Precipitation: <span class="precip">2%</span>
+                  </li>
+                  <li class="details">
+                    Humidity: <span class="humid">77%</span>
+                  </li>
+                  <li class="details">Wind: <span>14khm/h</span></li>
+                </ul>
+              </div>
+              <div class="col-4 info-right">
+                <h2 id="h2-city">Taipei</h2>
+                <ul id="current-date" class="info right">
+                  <li id="current-time" class="time-date">5:00</li>
+                  <li id="current-day" class="time-date">Wednesday</li>
+                  <li class="time-date">Partly cloudy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="forecast">
+          <div class="row">
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-regular fa-cloud-sun icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    17°<span class="small-degrees">C</span>
+                    <strong
+                      >22°<span class="small-degrees-strong">C</span></strong
+                    >
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>WED</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-regular fa-cloud-sun icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    19°<span class="small-degrees">C</span>
+                    <strong>24°C</strong>
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>THU</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-duotone fa-cloud icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    19°<span class="small-degrees">C</span>
+                    <strong>23°C</strong>
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>FRI</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-duotone fa-cloud icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    18°<span class="small-degrees">C</span>
+                    <strong>25°C</strong>
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>SAT</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-duotone fa-cloud-showers-heavy icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    17°<span class="small-degrees">C</span>
+                    <strong>24°C</strong>
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>SUN</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="daily">
+                <li class="future">
+                  <i class="fas fa-duotone fa-cloud-rain icon"></i>
+                </li>
+                <li class="future">
+                  <div class="temp">
+                    16°<span class="small-degrees">C</span>
+                    <strong>18°C</strong>
+                  </div>
+                </li>
+                <li class="future">
+                  <h5>MON</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="week4+5.js"></script>
+  </body>
+</html>
