@@ -14,3 +14,7 @@
 ## WEEK 4 (11h 38min)
 * JS Functions, Debugging, Dates, Events, Forms 15.-16.12.2021
 * Homework (had 2-3 EUREKA moments!! Figured out some things on my own - feeling great!) 16.-18.12.2021 (18.12.HW review video only)
+
+## WEEK 5 (13h 50min)
+* API (OpenWeather, Geolocation etc.) 19./20./22./23.12.2021
+* Homework (totally overdid it but learnt so much and it was so much fun! over 8h) 23./24./25.12.2021
