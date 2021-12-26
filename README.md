@@ -18,3 +18,8 @@
 ## WEEK 5 (13h 50min)
 * API (OpenWeather, Geolocation etc.) 19./20./22./23.12.2021
 * Homework (totally overdid it but learnt so much and it was so much fun! over 8h) 23./24./25.12.2021
+
+## WEEK 6 (2h 15min)
+* Development Workflow (Git, GitHub, hosting, Netlify, accidentally worked on Weather App repository for 1/2h) 26.12.2021
+* Homework (added open-source code link and commited+pushed via GitHub for Desktop <-- connected to Netlify) 26.12.2021
+
