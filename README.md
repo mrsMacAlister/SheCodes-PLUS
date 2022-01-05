@@ -24,6 +24,6 @@
 * Homework (added open-source code link and commited+pushed via GitHub for Desktop <-- connected to Netlify) 26.12.2021
 
 ## WEEK 7 (7h)
-* Weather App Project hosted on Netlify (29.12.2021 - 05.01.2022)
+* Weather App Project hosted on Netlify (29.-31.12.2021, 03.-05.01.2022)
 * https://eager-bose-8ad9df.netlify.app/
 * https://github.com/mrsMacAlister/Weather-App-project
