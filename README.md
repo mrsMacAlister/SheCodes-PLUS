@@ -27,3 +27,9 @@
 * Weather App Project hosted on Netlify (29.-31.12.2021, 03.-05.01.2022)
 * https://eager-bose-8ad9df.netlify.app/
 * https://github.com/mrsMacAlister/Weather-App-project
+
+## WEEK 8 (2h)
+* Weather App Project finished! Includes 6 days of forecast (API data) in imperial & metric units (07.01.2022)
+* links as above (Week 7)
+
+# 🎉 COMPLETED 🎉
